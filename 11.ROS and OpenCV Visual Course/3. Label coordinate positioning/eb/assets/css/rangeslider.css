@@ -1,0 +1,221 @@
+ .irs {
+   position: relative;
+   display: block;
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   font-size: 12px;
+   font-family: Arial, sans-serif;
+ }
+ .irs-line {
+   position: relative;
+   display: block;
+   overflow: hidden;
+   outline: none !important;
+ }
+.irs-shadow {
+    position: absolute;
+    display: none;
+    left: 0;
+    width: 0;
+}
+.irs-bar {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 0;
+}
+.irs-handle {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    cursor: default;
+    z-index: 1;
+}
+.irs-handle.type_last {
+    z-index: 2;
+}
+.irs-min,
+.irs-max {
+    position: absolute;
+    display: block;
+    cursor: default;
+}
+.irs-min {
+    left: 0;
+}
+.irs-max {
+    right: 0;
+}
+.irs-from,
+.irs-to,
+.irs-single {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    cursor: default;
+    white-space: nowrap;
+}
+.irs-grid {
+    position: absolute;
+    display: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+.irs-with-grid .irs-grid {
+    display: block;
+}
+.irs-grid-pol {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 8px;
+    background: #000;
+}
+.irs-grid-pol.small {
+    height: 4px;
+}
+.irs-grid-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 9px;
+    line-height: 9px;
+    padding: 0 3px;
+    color: #000;
+}
+.irs-disable-mask {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -1%;
+    width: 102%;
+    height: 100%;
+    cursor: default;
+    background: rgba(0, 0, 0, 0);
+    z-index: 2;
+}
+.lt-ie9 .irs-disable-mask {
+    background: #000;
+    filter: alpha(opacity=0);
+    cursor: not-allowed;
+}
+.irs-disabled {
+    opacity: 0.4;
+}
+.irs-hidden-input {
+    position: absolute !important;
+    display: block !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+    outline: none !important;
+    z-index: -9999 !important;
+    background: none !important;
+    border-style: solid !important;
+    border-color: transparent !important;
+}
+.irs--flat {
+    height: 40px;
+}
+.irs--flat.irs-with-grid {
+    height: 60px;
+}
+.irs--flat .irs-line {
+    top: 25px;
+    height: 12px;
+    background-color: #dee5eb;
+    border-radius: 4px;
+}
+.irs--flat .irs-bar {
+    top: 25px;
+    height: 12px;
+    background-color: #485ed2;
+}
+.irs--flat .irs-bar--single {
+    border-radius: 4px 0 0 4px;
+}
+.irs--flat .irs-shadow {
+    height: 1px;
+    bottom: 16px;
+    background-color: #dee5eb;
+}
+.irs--flat .irs-handle {
+    top: 22px;
+    width: 16px;
+    height: 18px;
+    background-color: transparent;
+}
+.irs--flat .irs-handle > i:first-child {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    border-radius: 1px;
+    background-color: #3243a9;
+}
+.irs--flat .irs-handle.state_hover > i:first-child,
+.irs--flat .irs-handle:hover > i:first-child {
+    background-color: #5783f4;
+}
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+    top: 0;
+    padding: 1px 3px;
+    color: #5d687d;
+    font-size: 10px;
+    line-height: 1.333;
+    text-shadow: none;
+    background-color: #dee5eb;
+    border-radius: 4px;
+}
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+    color: white;
+    font-size: 10px;
+    line-height: 1.333;
+    text-shadow: none;
+    padding: 1px 5px;
+    background-color: #485ed2;
+    border-radius: 4px;
+}
+.irs--flat .irs-from:before,
+.irs--flat .irs-to:before,
+.irs--flat .irs-single:before {
+    position: absolute;
+    display: block;
+    content: "";
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -3px;
+    overflow: hidden;
+    border: 3px solid transparent;
+    border-top-color: #485ed2;
+}
+.irs--flat .irs-grid-pol {
+    background-color: #dee5eb;
+}
+.irs--flat .irs-grid-text {
+    color: #5d687d;
+}
