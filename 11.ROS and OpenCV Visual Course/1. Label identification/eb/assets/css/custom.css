@@ -1,0 +1,348 @@
+.progress-bar {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(255, 0, 0, 0.7);
+}
+.progress-bar.animated::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient( 90deg, rgba(233, 233, 233, 1) 0, rgba(233, 233, 233, 0.9) 50%, rgba(233, 233, 233, 0.8) 100% );
+    -webkit-animation: barAnim 3s ease-out infinite;
+    animation: barAnim 3s ease-out infinite;
+    content: "";
+}
+@keyframes barAnim {
+    100% {
+        transform: translateX(0%);
+        opacity: 0;
+   }
+}
+.tp-checkbox {
+    transform: translateY(-3px);
+}
+.tp-checkbox input {
+    display: none;
+}
+.tp-checkbox input:checked ~ label::after {
+    background-color: #0989FF;
+    border-color: #0989FF;
+}
+.tp-checkbox input:checked ~ label::before {
+    visibility: visible;
+    opacity: 1;
+}
+.tp-checkbox label {
+    font-size: 15px;
+    color: #55585B;
+    position: relative;
+    padding-left: 26px;
+    z-index: 1;
+}
+.tp-checkbox label.text-tiny {
+    font-size: 13px;
+}
+.tp-checkbox label::after {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    line-height: 16px;
+    text-align: center;
+    border: 1px solid #E4E4E4;
+    z-index: -1;
+    -webkit-transition: all 0.2s 0s ease-out;
+    -moz-transition: all 0.2s 0s ease-out;
+    -ms-transition: all 0.2s 0s ease-out;
+    -o-transition: all 0.2s 0s ease-out;
+    transition: all 0.2s 0s ease-out;
+    border-radius: 4px;
+}
+.tp-checkbox label::before {
+    position: absolute;
+    content: url("../img/product/icons/check.svg");
+    top: 4px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    line-height: 16px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    color: #fff;
+    -webkit-transition: all 0.2s 0s ease-out;
+    -moz-transition: all 0.2s 0s ease-out;
+    -ms-transition: all 0.2s 0s ease-out;
+    -o-transition: all 0.2s 0s ease-out;
+    transition: all 0.2s 0s ease-out;
+}
+.tp-checkbox label a:hover {
+    color: #0989FF;
+}
+.tp-checkbox label:hover {
+    cursor: pointer;
+}
+.tp-checkbox-secondary input {
+    display: none;
+}
+.tp-checkbox-secondary label {
+    display: block;
+}
+.tp-checkbox-secondary input:checked ~ span::after {
+    background-color: #0989FF;
+    border-color: #0989FF;
+}
+.tp-checkbox-secondary input:checked ~ span::before {
+    visibility: visible;
+    opacity: 1;
+}
+.tp-checkbox-secondary span {
+    font-size: 15px;
+    color: #55585B;
+    position: relative;
+    padding-left: 26px;
+    z-index: 1;
+}
+.tp-checkbox-secondary span::after {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    line-height: 16px;
+    text-align: center;
+    border: 1px solid #E4E4E4;
+    z-index: -1;
+    -webkit-transition: all 0.2s 0s ease-out;
+    -moz-transition: all 0.2s 0s ease-out;
+    -ms-transition: all 0.2s 0s ease-out;
+    -o-transition: all 0.2s 0s ease-out;
+    transition: all 0.2s 0s ease-out;
+    border-radius: 4px;
+}
+.tp-checkbox-secondary span::before {
+    position: absolute;
+    content: url("../img/product/icons/check.svg");
+    top: 4px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    line-height: 16px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    color: #fff;
+    -webkit-transition: all 0.2s 0s ease-out;
+    -moz-transition: all 0.2s 0s ease-out;
+    -ms-transition: all 0.2s 0s ease-out;
+    -o-transition: all 0.2s 0s ease-out;
+    transition: all 0.2s 0s ease-out;
+}
+.tp-checkbox-secondary span a:hover {
+    color: #0989FF;
+}
+.tp-checkbox-secondary span:hover {
+    cursor: pointer;
+}
+.select-bordered .choices[data-type*="select-one"]::after {
+    right: 15px;
+}
+.select-bordered .choices__inner{
+    height: 44px;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    padding-left: 15px !important;
+}
+.profile-gender-select.select-bordered .choices__inner{
+    border: 1px solid #EFF2F5;
+    height: 49px;
+}
+.profile-gender-select.select-bordered .choices__list--single {
+    height: 49px;
+    line-height: 47px;
+}
+.offcanvas-area.offcanvas-opened{
+    transform: translateX(0);
+}
+.body-overlay.opened{
+    visibility: visible;
+    opacity: .7;
+}
+.tpSlideDownTarget {
+    transition: height 0.35s ease-in-out;
+    overflow: hidden;
+}
+.tpSlideDownTarget:not(.active) {
+    display: none;
+}
+.tpSlideDownBtn.active {
+    background-color: red;
+}
+
+.tpSlideDownBtn.active .dropdown-arrow {
+    transform: rotate(90deg);
+}
+ 
+ .choices[data-type*="select-one"]::after {
+    border: 0;
+    background-color: transparent;
+    transform: translateY(-50%);
+    margin-top: 0;
+    right: 0;
+    content: '';
+    transform-origin: center;
+    color: #616266;
+    font-weight: 500;
+    height: auto;
+    width: auto;
+    transition: transform .2s ease-in-out;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #777778;
+    top: 48%;
+}
+ .choices.is-open[data-type*="select-one"]::after {
+    transform: translateY(-50%) rotate(-180deg);
+}
+.choices[data-type*="select-one"].is-open::after {
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: #777778;
+    margin-top: 0;
+}
+   .choices__inner {
+    min-width: 75px;
+    height: 38px;
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    padding: 0 !important;
+    padding-right: 16px !important;
+    transition: all .3s ease-in-out;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 500;
+  }
+   .choices.is-focused .choices__inner {
+    background-color: transparent;
+    border-color:  rgba(239, 242, 245, 1);
+  }
+   .choices.is-open .choices__inner {
+    background-color: transparent;
+    border-color: 1px solid rgba(239, 242, 245, 1);
+  }
+   .choices__item.choices__item--selectable {
+    color: #121420;
+  }
+   .choices__list--single{
+    padding: 0 0;
+    height: 44px;
+    line-height: 42px;
+  }
+   .choices__list--dropdown, 
+   .choices__list[aria-expanded]{
+    transition: all .3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+   .is-active.choices__list--dropdown, 
+   .is-active.choices__list[aria-expanded] {
+    visibility: visible;
+    opacity: 1;
+}
+
+   .is-flipped.is-open .choices__inner {
+    border-radius: 6px;
+}
+
+ .choices__list--dropdown, 
+.is-flipped .choices__list[aria-expanded],
+ .choices__list[aria-expanded] {
+    background-color: #fff;
+    border: 1px solid rgba(239, 242, 245, 1);
+    border-radius: 6px;
+    min-width: 150px;
+}
+
+ .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item{
+    padding: 0;
+    padding-left: 16px;
+    padding-bottom: 3px;
+    color: #777778;
+}
+
+ .choices__list.choices__list--dropdown{
+    padding: 8px 0;
+    
+}
+
+ .choices__list.choices__list--dropdown{
+    left: auto;
+    right: 0;
+    
+}
+ .choices[data-type*="select-one"] .choices__input{
+     display: none;
+}
+ .choices__item.choices__item--choice.is-selected{
+    color: #0989FF;
+}
+ .choices__item.choices__item--choice:hover{
+    color: #0989FF;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted::after, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted::after, .choices__placeholder {
+	opacity: 1;
+}
+.is-open .choices__list--dropdown, .is-open .choices__list[aria-expanded] {
+	border-color: rgba(239, 242, 245, 1);
+}
+.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+	color: #0989FF;
+}
+
+.tags-input-wrapperss{
+    background: transparent;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+}
+.tags-input-wrapper input{
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    padding: 5px 20px;
+    border: 1px solid #EFF2F5;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+.tags-input-wrapper input:focus{
+    border-color: #0989FF;
+}
+.tags-input-wrapper .tag{
+    display: inline-block;
+    background-color: #f4f4f4;
+    color: #010F1C;
+    border-radius: 6px;
+    padding: 5px 3px 2px 13px;
+    margin-right: 5px;
+    margin-bottom:5px;
+    line-height: 1;
+}
+.tags-input-wrapper .tag b {
+    margin: 0 7px 3px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 400;
+}
