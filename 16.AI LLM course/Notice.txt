@@ -1,0 +1,1 @@
+Since the mechanical dog supplies power to the Raspberry Pi through a pin header, the Raspberry Pi USB port has a certain current limit. When adjusting the volume of the voice module, do not adjust the volume to 100%.
